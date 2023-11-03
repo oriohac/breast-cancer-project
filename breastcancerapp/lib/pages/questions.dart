@@ -9,11 +9,307 @@ class Questions extends StatefulWidget {
 }
 
 class _QuestionsState extends State<Questions> {
+  String lump = 'No';
+  String history = 'No';
+  String discharge = 'No';
+  String describe = 'None';
+  String age = 'Young (14-25)';
   @override
   Widget build(BuildContext context) {
-    String? dropdownValue = 'No';
-    String? dropdownValue1 = 'Milky';
-    String? dropdownValue2 = 'Young (14-25)';
+    void healthStatus() {
+      if (discharge == 'No' &&
+          describe == 'None' &&
+          age == 'Young (14-25)' &&
+          lump == 'No' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/norisk');
+      } else if (discharge == 'No' &&
+          describe == 'None' &&
+          age == 'Young (14-25)' &&
+          lump == 'No' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/norisk');
+      } else if (discharge == 'No' &&
+          describe == 'None' &&
+          age == 'Young (14-25)' &&
+          lump == 'Yes' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/norisk');
+      } else if (discharge == 'No' &&
+          describe == 'None' &&
+          age == 'Young (14-25)' &&
+          lump == 'Yes' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'No' &&
+          describe == 'None' &&
+          age == 'Adult (26-45)' &&
+          lump == 'No' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/norisk');
+      } else if (discharge == 'No' &&
+          describe == 'None' &&
+          age == 'Adult (26-45)' &&
+          lump == 'No' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'No' &&
+          describe == 'None' &&
+          age == 'Adult (26-45)' &&
+          lump == 'Yes' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'No' &&
+          describe == 'None' &&
+          age == 'Adult (26-45)' &&
+          lump == 'Yes' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'No' &&
+          describe == 'None' &&
+          age == 'Old (46>)' &&
+          lump == 'No' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'No' &&
+          describe == 'None' &&
+          age == 'Old (46>)' &&
+          lump == 'No' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'No' &&
+          describe == 'None' &&
+          age == 'Old (46>)' &&
+          lump == 'Yes' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'No' &&
+          describe == 'None' &&
+          age == 'Old (46>)' &&
+          lump == 'Yes' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Milky' &&
+          age == 'Young (14-25)' &&
+          lump == 'No' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/norisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Milky' &&
+          age == 'Young (14-25)' &&
+          lump == 'No' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Milky' &&
+          age == 'Young (14-25)' &&
+          lump == 'Yes' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Milky' &&
+          age == 'Young (14-25)' &&
+          lump == 'Yes' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Milky' &&
+          age == 'Adult (26-45)' &&
+          lump == 'No' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Milky' &&
+          age == 'Adult (26-45)' &&
+          lump == 'No' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Milky' &&
+          age == 'Adult (26-45)' &&
+          lump == 'Yes' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Milky' &&
+          age == 'Adult (26-45)' &&
+          lump == 'Yes' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Milky' &&
+          age == 'Old (46>)' &&
+          lump == 'No' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Milky' &&
+          age == 'Old (46>)' &&
+          lump == 'No' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Milky' &&
+          age == 'Old (46>)' &&
+          lump == 'Yes' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Milky' &&
+          age == 'Old (46>)' &&
+          lump == 'Yes' &&
+          history == '') {
+        Navigator.pushNamed(context, '/highrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Yellow' &&
+          age == 'Young (14-25)' &&
+          lump == 'No' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Yellow' &&
+          age == 'Young (14-25)' &&
+          lump == 'No' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Yellow' &&
+          age == 'Young (14-25)' &&
+          lump == 'Yes' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Yellow' &&
+          age == 'Young (14-25)' &&
+          lump == 'Yes' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Yellow' &&
+          age == 'Adult (26-45)' &&
+          lump == 'No' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Yellow' &&
+          age == 'Adult (26-45)' &&
+          lump == 'No' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Yellow' &&
+          age == 'Adult (26-45)' &&
+          lump == 'Yes' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Yellow' &&
+          age == 'Adult (26-45)' &&
+          lump == 'Yes' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/highrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Yellow' &&
+          age == 'Old (46>)' &&
+          lump == 'No' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Yellow' &&
+          age == 'Old (46>)' &&
+          lump == 'No' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/highrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Yellow' &&
+          age == 'Old (46>)' &&
+          lump == 'Yes' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/highrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Yellow' &&
+          age == 'Old (46>)' &&
+          lump == 'Yes' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/highrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Redish, Brownish or Clear' &&
+          age == 'Young (14-25)' &&
+          lump == 'No' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Redish, Brownish or Clear' &&
+          age == 'Young (14-25)' &&
+          lump == 'No' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Redish, Brownish or Clear' &&
+          age == 'Young (14-25)' &&
+          lump == 'Yes' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Redish, Brownish or Clear' &&
+          age == 'Young (14-25)' &&
+          lump == 'Yes' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/highrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Redish, Brownish or Clear' &&
+          age == 'Adult (26-45)' &&
+          lump == 'No' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/lowrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Redish, Brownish or Clear' &&
+          age == 'Adult (26-45)' &&
+          lump == 'No' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/highrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Redish, Brownish or Clear' &&
+          age == 'Adult (26-45)' &&
+          lump == 'Yes' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/highrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Redish, Brownish or Clear' &&
+          age == 'Adult (26-45)' &&
+          lump == 'Yes' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/highrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Redish, Brownish or Clear' &&
+          age == 'Old (46>)' &&
+          lump == 'No' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/highrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Redish, Brownish or Clear' &&
+          age == 'Old (46>)' &&
+          lump == 'No' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/highrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Redish, Brownish or Clear' &&
+          age == 'Old (46>)' &&
+          lump == 'Yes' &&
+          history == 'No') {
+        Navigator.pushNamed(context, '/highrisk');
+      } else if (discharge == 'Yes' &&
+          describe == 'Redish, Brownish or Clear' &&
+          age == 'Old (46>)' &&
+          lump == 'Yes' &&
+          history == 'Yes') {
+        Navigator.pushNamed(context, '/highrisk');
+      } else {
+        Navigator.pushNamed(context, '/highrisk');
+      }
+    }
+
     DateTime date = DateTime.now();
     String formattedDate = DateFormat('MMMM d, y').format(date);
     return Scaffold(
@@ -27,13 +323,13 @@ class _QuestionsState extends State<Questions> {
                 const Padding(
                   padding: EdgeInsets.fromLTRB(0, 12, 0, 12),
                   child: SizedBox(
-                      width: 320,
-                      child: Expanded(
-                          child: Text(
-                        "Answer a few questions below on what you found.",
-                        style: TextStyle(fontFamily: 'Poppinsr', fontSize: 17),
-                        textAlign: TextAlign.start,
-                      ))),
+                    width: 320,
+                    child: Text(
+                                      "Answer a few questions below on what you found.",
+                                      style: TextStyle(fontFamily: 'Poppinsr', fontSize: 17),
+                                      textAlign: TextAlign.start,
+                                    ),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
@@ -43,7 +339,10 @@ class _QuestionsState extends State<Questions> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         OutlinedButton(
-                          style: OutlinedButton.styleFrom(side: const BorderSide(color: Color(0xffDB7D95),)) ,
+                          style: OutlinedButton.styleFrom(
+                              side: const BorderSide(
+                            color: Color(0xffDB7D95),
+                          )),
                           onPressed: () {},
                           child: Text(
                             'Today is: $formattedDate',
@@ -57,27 +356,27 @@ class _QuestionsState extends State<Questions> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  width: 320,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Expanded(
-                          child: Text(
-                        'Did you find a lump?',
-                        style: TextStyle(fontFamily: 'Poppinsr', fontSize: 17),
-                        textAlign: TextAlign.left,
-                      )),
-                    ],
-                  ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 320,
+                      child: Text(
+                                          'Did you find a lump?',
+                                          style: TextStyle(fontFamily: 'Poppinsr', fontSize: 17),
+                                          textAlign: TextAlign.left,
+                                        ),
+                    ),
+                  ],
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
                   child: SizedBox(
                     width: 320,
-                    height: 60,
+                    height: 48,
                     child: DropdownButtonFormField<String>(
                       decoration: const InputDecoration(
+                        contentPadding: EdgeInsets.fromLTRB(12, 0, 12, 0),
                         focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                                 style: BorderStyle.solid,
@@ -93,7 +392,7 @@ class _QuestionsState extends State<Questions> {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(12))),
                       ),
-                      value: dropdownValue,
+                      value: lump,
                       items: <String>['No', 'Yes']
                           .map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
@@ -108,7 +407,7 @@ class _QuestionsState extends State<Questions> {
                       }).toList(),
                       onChanged: (String? newValue) {
                         setState(() {
-                          dropdownValue = newValue!;
+                          lump = newValue!;
                         });
                       },
                       icon: const Icon(
@@ -118,27 +417,27 @@ class _QuestionsState extends State<Questions> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  width: 320,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Expanded(
-                          child: Text(
-                        'Is there a history of breast cancer in your family?',
-                        style: TextStyle(fontFamily: 'Poppinsr', fontSize: 17),
-                        textAlign: TextAlign.start,
-                      )),
-                    ],
-                  ),
+               const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 320,
+                      child: Text(
+                                          'Is there a history of breast cancer in your family?',
+                                          style: TextStyle(fontFamily: 'Poppinsr', fontSize: 17),
+                                          textAlign: TextAlign.start,
+                                        ),
+                    ),
+                  ],
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
                   child: SizedBox(
                     width: 320,
-                    height: 60,
+                    height: 48,
                     child: DropdownButtonFormField<String>(
                       decoration: const InputDecoration(
+                         contentPadding: EdgeInsets.fromLTRB(12, 0, 12, 0),
                         focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                                 style: BorderStyle.solid,
@@ -154,7 +453,7 @@ class _QuestionsState extends State<Questions> {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(12))),
                       ),
-                      value: dropdownValue,
+                      value: history,
                       items: <String>['No', 'Yes']
                           .map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
@@ -169,7 +468,7 @@ class _QuestionsState extends State<Questions> {
                       }).toList(),
                       onChanged: (String? newValue) {
                         setState(() {
-                          dropdownValue = newValue!;
+                          history = newValue!;
                         });
                       },
                       icon: const Icon(
@@ -179,27 +478,27 @@ class _QuestionsState extends State<Questions> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  width: 320,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Expanded(
-                          child: Text(
-                        'Have you had a nipple discharge?',
-                        style: TextStyle(fontFamily: 'Poppinsr', fontSize: 17),
-                        textAlign: TextAlign.start,
-                      )),
-                    ],
-                  ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 320,
+                      child: Text(
+                                          'Have you had a nipple discharge?',
+                                          style: TextStyle(fontFamily: 'Poppinsr', fontSize: 17),
+                                          textAlign: TextAlign.start,
+                                        ),
+                    ),
+                  ],
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
                   child: SizedBox(
                     width: 320,
-                    height: 60,
+                    height: 48,
                     child: DropdownButtonFormField<String>(
                       decoration: const InputDecoration(
+                         contentPadding: EdgeInsets.fromLTRB(12, 0, 12, 0),
                         focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                                 style: BorderStyle.solid,
@@ -215,7 +514,7 @@ class _QuestionsState extends State<Questions> {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(12))),
                       ),
-                      value: dropdownValue,
+                      value: discharge,
                       items: <String>['No', 'Yes']
                           .map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
@@ -230,7 +529,7 @@ class _QuestionsState extends State<Questions> {
                       }).toList(),
                       onChanged: (String? newValue) {
                         setState(() {
-                          dropdownValue = newValue!;
+                          discharge = newValue!;
                         });
                       },
                       icon: const Icon(
@@ -240,27 +539,27 @@ class _QuestionsState extends State<Questions> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  width: 320,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Expanded(
-                          child: Text(
-                        'If yes, choose an option that best describe the discharge',
-                        style: TextStyle(fontFamily: 'Poppinsr', fontSize: 17),
-                        textAlign: TextAlign.start,
-                      )),
-                    ],
-                  ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 320,
+                      child: Text(
+                                          'If yes, choose an option that best describe the discharge',
+                                          style: TextStyle(fontFamily: 'Poppinsr', fontSize: 17),
+                                          textAlign: TextAlign.start,
+                                        ),
+                    ),
+                  ],
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
                   child: SizedBox(
                     width: 320,
-                    height: 60,
+                    height: 48,
                     child: DropdownButtonFormField<String>(
                       decoration: const InputDecoration(
+                         contentPadding: EdgeInsets.fromLTRB(12, 0, 12, 0),
                         focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                                 style: BorderStyle.solid,
@@ -276,12 +575,12 @@ class _QuestionsState extends State<Questions> {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(12))),
                       ),
-                      value: dropdownValue1,
+                      value: describe,
                       items: <String>[
+                        'None',
                         'Milky',
-                        'Yellowish',
-                        'Brownish',
-                        'Redish'
+                        'Yellow',
+                        'Redish, Brownish or Clear'
                       ].map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
                             value: value,
@@ -295,7 +594,7 @@ class _QuestionsState extends State<Questions> {
                       }).toList(),
                       onChanged: (String? newValue) {
                         setState(() {
-                          dropdownValue1 = newValue!;
+                          describe = newValue!;
                         });
                       },
                       icon: const Icon(
@@ -305,27 +604,27 @@ class _QuestionsState extends State<Questions> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  width: 320,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Expanded(
-                          child: Text(
-                        'How old are you?',
-                        style: TextStyle(fontFamily: 'Poppinsr', fontSize: 17),
-                        textAlign: TextAlign.start,
-                      )),
-                    ],
-                  ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 320,
+                      child: Text(
+                                          'How old are you?',
+                                          style: TextStyle(fontFamily: 'Poppinsr', fontSize: 17),
+                                          textAlign: TextAlign.start,
+                                        ),
+                    ),
+                  ],
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
                   child: SizedBox(
                     width: 320,
-                    height: 60,
+                    height: 48,
                     child: DropdownButtonFormField<String>(
                       decoration: const InputDecoration(
+                         contentPadding: EdgeInsets.fromLTRB(12, 0, 12, 0),
                         focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                                 style: BorderStyle.solid,
@@ -341,11 +640,11 @@ class _QuestionsState extends State<Questions> {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(12))),
                       ),
-                      value: dropdownValue2,
+                      value: age,
                       items: <String>[
                         'Young (14-25)',
-                        'Adult (26-60)',
-                        'Aged (61>)'
+                        'Adult (26-45)',
+                        'Old (46>)'
                       ].map<DropdownMenuItem<String>>((String value) {
                         return DropdownMenuItem<String>(
                             value: value,
@@ -359,7 +658,7 @@ class _QuestionsState extends State<Questions> {
                       }).toList(),
                       onChanged: (String? newValue) {
                         setState(() {
-                          dropdownValue2 = newValue!;
+                          age = newValue!;
                         });
                       },
                       icon: const Icon(
@@ -379,10 +678,10 @@ class _QuestionsState extends State<Questions> {
                         backgroundColor: const Color(0xffDB7D95),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/lowrisk');
+                        healthStatus();
                       },
                       child: const Text(
-                        "NEXT",
+                        "SUBMIT",
                         style: TextStyle(
                           color: Colors.black,
                           fontFamily: 'Poppins',
