@@ -1,6 +1,6 @@
 # Breastcancerapp
 
-A project built for detection of Breast Cancer through self examination - by [Oriohac](https//www.x.com/oriohac).
+A project built for detection of Breast Cancer through self examination - by [Oriohac](https://www.x.com/oriohac).
 
 ## Getting Started
 
