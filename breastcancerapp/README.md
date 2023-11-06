@@ -1,16 +1,19 @@
-# breastcancerapp
+# Breastcancerapp
 
-A new Flutter project.
+A project built for detection of Breast Cancer through self examination - by [Oriohac](https//www.x.com/oriohac).
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+The user signs up and goes through the self examination processes, by reading through instructions on each page and practicing all that is written on those pages.
 
-A few resources to get you started if this is your first Flutter project:
+![Sgnup](readmeImages/ca-signup.png "Signup") ![Logn](readmeImages/ca-login.png "Login") ![Start](readmeImages/ca-start.png) ![Start](readmeImages/ca-updown.png "Start Check")
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Result
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+After the self check, the user determines if any of the symptoms is present in their breast, if there is none, the user is shown that they are in the no risk category and advised to see a doctor.
+
+![Decision](readmeImages/ca-decision.png) ![No Risk](readmeImages/ca-norisk.png)
+
+If the user finds some symptoms, they are taken to a form where they input some of the symptoms found and the final output shows whether their risk level is high, low or np risk level.
+
+![Take Deep Breathe](readmeImages/ca-breathe.png "Take deep breathe") ![Questions](readmeImages/ca-questions.png) ![Low Risk](readmeImages/ca-lowrisk.png) ![High Risk](readmeImages/ca-highrisk.png)
